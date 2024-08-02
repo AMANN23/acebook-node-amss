@@ -57,9 +57,9 @@ jobs:
     strategy:
       matrix:
         node-version: ['22.x']
-        appname: ['aws-codedeploy']
-        deploy-group: ['staging']
-        s3-bucket: ['aws-codedeploy-deployments']
+        appname: ['acebook-node-amss']
+        deploy-group: ['production']
+        s3-bucket: ['acebook-adss-bucket']
         s3-filename: ['staging-aws-codedeploy-${{ github.sha }}']
 
     steps:
