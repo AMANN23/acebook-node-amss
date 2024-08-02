@@ -1,8 +1,9 @@
 #!/bin/bash
 echo "Stopping the Node.js application..."
 
-# Stop PM2 managed processes
-pm2 stop all || true
+# Stop the Node.js application using PM2
+pm2 stop my-node-app || true
 
-# If PM2 is not used, you might need to kill the Node.js process directly
-# pkill node || true
+# If you use a different stop command, adjust accordingly
+# cd /home/ubuntu/aws-codedeploy
+# npm stop
