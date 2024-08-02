@@ -57,7 +57,7 @@ jobs:
     strategy:
       matrix:
         node-version: ['22.x']
-        appname: ['acebook-node-amss']
+        appname: ['adss-acebook']
         deploy-group: ['production']
         s3-bucket: ['acebook-adss-bucket']
         s3-filename: ['staging-aws-codedeploy-${{ github.sha }}']
