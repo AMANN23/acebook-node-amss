@@ -1,9 +1,12 @@
 #!/bin/bash
+
 echo "Starting the Node.js application..."
 
-# Start the Node.js application using PM2
-pm2 start /home/ubuntu/aws-codedeploy/app.js --name my-node-app || true
+# Navigate to the application directory
+cd /home/ec2-user/aws-codedeploy
 
-# If you use a different start command, adjust accordingly
-# cd /home/ubuntu/aws-codedeploy
-# npm start
+# Start the Node.js application using PM2
+pm2 start /home/ec2-user/aws-codedeploy/app.js --name my-node-app || true
+
+# Save the PM2 process list to ensure it restarts on reboot
+pm2 save
